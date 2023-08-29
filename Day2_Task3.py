@@ -3,7 +3,7 @@ class Queue(list):
         super().__init__(lst)
         e_null = lst[0]
         self.lst = lst.pop(0)
-        return f'Ушел из очереди: {e_null}'
+        return f'Ушел из очереди: {e_null}. В очереди: {", ".join(map(str,lst))}'
 
     def get_info(self):
         return f'В очереди {len(lst)} человек: {", ".join(map(str,lst))}. Следующий в очереди: {lst[0]}'
@@ -15,4 +15,3 @@ lst=[input('Введите имя человека в очереди: ') for i i
 q = Queue()
 print(q.front(),q.front(), sep = '\n')
 print(q.get_info())
-
